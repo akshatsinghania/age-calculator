@@ -4,3 +4,22 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4203a9, #90bafc);
+  color: #fff;
+  padding: 10px;
+}
+.calculator {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.calculator h1 {
+  font-size: 60px;
+}
+.calculator h1 span{
+    color:#ffff76
+}
