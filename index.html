@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>age-calculator</title>
     <link rel="stylesheet" href="style.css" />
@@ -13,15 +12,17 @@
                 <div class="input-box">
                     <input type="date" id="date">
                     <button onClick ="calculateAge()">Calculate</button>
-                </div>
+                </div>  
+                <p id="result"></p>
         </div>
     </div>
     <script>
         let userInput = document.getElementById("date");
         userInput.max = new Date().toISOString().split("T")[0];
+        let result = document.getElementById("result")
 
         function calculateAge(){
-            let birthDate = new date(userInput.value);
+            let birthDate = new Date(userInput.value);
 
             let d1=birthDate.getDate();
             let m1=birthDate.getMonth() + 1;
@@ -53,7 +54,7 @@
             m3 = 11;
             y3--
            }
-            console.log(y3,m3,d3);
+            result.innerHTML = `You are <span>${y3}<span/> years, <span>${m3}<span/> months and <span>${d3}<span/> days old`;
             }
             
         function getDaysInMonth(year,month){
